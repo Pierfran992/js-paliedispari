@@ -24,6 +24,13 @@ console.log("La somma dei due numeri è " + sommaInputNumber);
 // creo la costante in cui richiamo la funzione pariODispari per verificare se la somma dei due numeri è pari o dispari
 const sommaPD = pariODispari(sommaInputNumber);
 
+// genero l'output per dire all'user se la somma è pari o dispari
+if (sommaPD == true) {
+    console.log("La somma dei due numeri è pari.");
+} else {
+    console.log("La somma dei due numeri è dispari.");
+}
+
 // genero l'output per dire all'user se ha vinto o perso
 if ((sommaPD == true && userChoice === "pari") || (sommaPD == false && userChoice === "dispari")) {
     console.log("HAI VINTO!!!");
