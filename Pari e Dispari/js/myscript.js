@@ -23,10 +23,9 @@ console.log("La somma dei due numeri è " + sommaInputNumber);
 
 // creo la costante in cui richiamo la funzione pariODispari per verificare se la somma dei due numeri è pari o dispari
 const sommaPD = pariODispari(sommaInputNumber);
-console.log(sommaPD);
 
 // genero l'output per dire all'user se ha vinto o perso
-if (sommaInputNumber % 2 == 0 && userChoice === "pari") {
+if ((sommaPD == true && userChoice === "pari") || (sommaPD == false && userChoice === "dispari")) {
     console.log("HAI VINTO!!!");
 } else {
     console.log("HAI PERSO!!!");
@@ -42,10 +41,9 @@ function numPcRandom () {
 function pariODispari (somma) {
     // creo una costante per richiamare l'argomento della function
     let c = somma;
-
     if (c % 2 == 0) {
-        return "La somma dei numeri è pari";
+        return true;
     } else {
-        return "La somma dei numeri è dispari"
+        return false;
     }
 }
